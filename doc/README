@@ -1,0 +1,21 @@
+A portage-like system to maintain applications segregated into /opt
+
+= Installing =
+
+You will need *ruby* and *rake* installed before proceeding. (Yep. Catch-22)
+
+  - git clone https://github.com/kiskeyix/opt-portage.git
+  - cd opt-portage
+  - rake -D
+
+= Developers =
+
+== Createing new Tasks ==
+  - copy tasks/skeleton.rake.example to tasks/my-task.rake
+  - edit my-task.rake. remember if you need to override 
+    methods from the Package class, you can simply open the class like:
+    class Package
+      def install
+        # run your install steps
+      end
+    end
