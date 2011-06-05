@@ -32,7 +32,7 @@ end
 
 desc "packs directory as distribution"
 task :dist do |t|
-    sh "cd .. && tar czf bportage-#{BVERSION}.tar.gz bportage --exclude=cache --exclude=build --exclude=.git"
+    sh "cd .. && tar czf opt-portage-#{BVERSION}.tar.gz opt-portage --exclude=cache --exclude=build --exclude=.git"
 end
 
 desc "cleans environment"
