@@ -5,10 +5,10 @@
 namespace :ruby do |n|
     # variables
     package_name       = "ruby"
-    major_version      = "1.8"
-    package_version    = "#{major_version}.7-p334"
+    major_version      = "1.9"
+    package_version    = "#{major_version}-stable"
     package_tar        = "#{package_name}-#{package_version}.tar.gz"
-    package_source_url = "ftp://ftp.ruby-lang.org/pub/ruby/#{major_version}/#{package_tar}"
+    package_source_url = "ftp://ftp.ruby-lang.org/pub/ruby/#{package_tar}"
     package_install_dir = "/opt/#{package_name}/#{major_version}"
     package_build_dir           = "build/#{package_name}-#{package_version}"
 
@@ -19,7 +19,7 @@ namespace :ruby do |n|
     directory package_build_dir
 
     desc "installs ruby, documentation and support tools"
-    task :all => [:install,"gem:install","localrake:install",:symlinks] do |t|
+    task :all => [:install,:symlinks] do |t|
         #Rake.application.invoke_task "rake:install"
     end
 
