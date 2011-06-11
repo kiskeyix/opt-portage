@@ -44,14 +44,14 @@ namespace :ruby do |n|
 
     desc "configures #{package_name}"
     task :configure => :source do |t|
-        FileUtils.chdir File.join(package_build_dir,"#{package_name}-#{package_version}")
+        FileUtils.chdir package_build_dir
         sh "./configure --prefix='#{package_install_dir}'"
     end
 
     desc "unpacks source"
     task :source => [package_build_dir,"cache/#{package_tar}"] do |t|
         arg = (package_tar =~ /\.bz[2]?$/) ? "j" : "z"
-        sh "tar x#{arg}f cache/#{package_tar} -C #{package_build_dir}"
+        sh "tar x#{arg}f cache/#{package_tar} -C #{package_build_dir} --strip-components 1"
     end
 
     desc "downloads #{package_tar}"
