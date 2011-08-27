@@ -1,3 +1,27 @@
+2011-08-26  Luis Mondesi <lemsx1@gmail.com>
+
+	* tasks/perl.rake: builds latest perl
+
+2011-06-11  Luis Mondesi <lemsx1@gmail.com>
+
+	* tasks/ruby.rake: fixes untar path
+
+2011-06-11  Luis Mondesi <lemsx1@gmail.com>
+
+	* tasks/ruby.rake: do ruby 1.9
+
+2011-06-05  Luis Mondesi <lemsx1@gmail.com>
+
+	* Rakefile: fixes dist
+
+2011-06-05  Luis Mondesi <lemsx1@gmail.com>
+
+	* README, doc/README: moves README to base
+
+2011-06-05  Luis Mondesi <lemsx1@gmail.com>
+
+	* ChangeLog: ditto
+
 2011-06-05  Luis Mondesi <lemsx1@gmail.com>
 
 	* initial commit
