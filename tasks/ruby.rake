@@ -2,6 +2,17 @@
 # Luis Mondesi <lemsx1@gmail.com>
 # 2011-04-07 17:07 EDT 
 # yep, update ruby itself!!
+#
+# In order to install Ruby with all its features we need these deps:
+# autoconf, m4, bison, libgdbm-dev, libncurses5-dev, libreadline5-dev,
+# tcl8.4-dev, tk8.4-dev, zlib1g-dev, libssl-dev, procps, file,
+# libffi-dev, ruby1.8, libyaml-dev
+#
+# ruby1.8 for "baseruby"
+#
+# To get all of them do:
+# sudo apt-get build-dep ruby1.9.1 # on Ubuntu
+#
 namespace :ruby do |n|
     # variables
     package_name       = "ruby"
