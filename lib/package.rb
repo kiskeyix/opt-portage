@@ -46,10 +46,10 @@ module Package
          `tar x#{deflate_arg}f cache/#{@tar} -C build`
       end
       # configures source code
-      def configure
+      def configure(args="")
          source if not File.exists? @build_dir
          raise Package::Error if not File.executable? File.join(@build_dir,"configure")
-         run_in_build "./configure --prefix='#{@install_dir}'"
+         run_in_build "./configure --prefix='#{@install_dir}' #{args}"
       end
       # builds package source in build/
       def build
