@@ -29,7 +29,7 @@ namespace :ruby do |n|
 
     desc "configures #{package.name}"
     task :configure => :source do |t|
-        package.configure "--with-readline"
+        package.configure
     end
 
     desc "unpacks source"
