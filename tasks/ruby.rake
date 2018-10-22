@@ -9,10 +9,10 @@ require "#{File.dirname(__FILE__)}/../lib/package.rb"
 namespace :ruby do |n|
     # variables
     package = Package::Core.new("ruby","2.5.3")
-    package.source_url = "ftp://ftp.ruby-lang.org/pub/ruby/#{package.tar}"
     # installs to /opt/ruby/MAJOR.MINOR
     full_version = package.version.split(/-/).first
     maj_min = full_version.split(/\./)[0..1].join('.')
+    package.source_url = "https://cache.ruby-lang.org/pub/ruby/#{maj_min}/#{package.tar}"
     package.install_dir = "/opt/#{package.name}/#{maj_min}"
 
     # tasks
