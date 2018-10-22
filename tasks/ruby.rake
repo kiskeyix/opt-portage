@@ -8,7 +8,7 @@
 require "#{File.dirname(__FILE__)}/../lib/package.rb"
 namespace :ruby do |n|
     # variables
-    package = Package::Core.new("ruby","2.5.1")
+    package = Package::Core.new("ruby","2.5.3")
     package.source_url = "ftp://ftp.ruby-lang.org/pub/ruby/#{package.tar}"
     # installs to /opt/ruby/MAJOR.MINOR
     full_version = package.version.split(/-/).first
