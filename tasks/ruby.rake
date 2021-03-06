@@ -8,7 +8,7 @@
 require "#{File.dirname(__FILE__)}/../lib/package.rb"
 namespace :ruby do |n|
   # variables
-  package = Package::Core.new("ruby","2.7.0")
+  package = Package::Core.new("ruby","3.0.0")
   # installs to /opt/ruby/MAJOR.MINOR
   full_version = package.version.split(/-/).first
   maj_min = full_version.split(/\./)[0..1].join('.')
